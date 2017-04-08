@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daniel | Blog </title>
+    <%= csrf_meta_tags %>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header >
+        <spam class="btn btn-danger"><h1>Daniel Mendoza Arredondo BLOG</h1></spam>
+      </header>
+      <div id="trunk">
+        <main>
+          <div id="flash_messages"><%= flash_messages(:close) %></div>
+          <%= yield %>
+        </main>
+        <aside>
+          <%= render "shared/log_status" %>
+        </aside>
+      </div>
+      <footer>
+        ACP BLOG<sup>&reg;</sup> since 2017. ACP All Rights Reserved.
+      </footer>
+    </div>
+  </body>
+</html>
